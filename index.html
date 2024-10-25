@@ -18,16 +18,28 @@
 
 <body>
   <main>
+    <div class="background-gradient"></div>
     <section class="hero">
-      <img src="./assets/images/logo.svg" alt="" class="bmi-logo">
-      <h1 class="hero-title">Body Mass <span>Index Calculator</span></h1>
-      <p class="hero-text">Better understand your weight in relation to your height using our body mass index (BM)
-        calculator. While BMI
-        is not the sole determinant of a healthy weight, it offers a valuable starting point to evaluate your overall
-        health and well-being.</p>
-      <form>
-        <p>Enter your details below</p>
-        <div class="radio-inputs"></div>
+      <div class="hero-text-container">
+        <img src="./assets/images/logo.svg" alt="" class="bmi-logo">
+        <h1 class="hero-title">Body Mass <span>Index Calculator</span></h1>
+        <p class="hero-text">Better understand your weight in relation to your height using our body mass index (BM)
+          calculator. While BMI
+          is not the sole determinant of a healthy weight, it offers a valuable starting point to evaluate your overall
+          health and well-being.</p>
+      </div>
+      <form class="bmi-form">
+        <p class="fw-700">Enter your details below</p>
+        <div class="radio-inputs">
+          <div class="metric-radio-input">
+            <input type="radio" id="metric-radio" name="measurement" value="metric" checked>
+            <label for="metric-radio" class="fw-700">Metric</label>
+          </div>
+          <div class="imperial-radio-input">
+            <input type="radio" id="imperial-radio" name="measurement" value="imperial">
+            <label for="imperial-radio" class="fw-700">Imperial</label>
+          </div>
+        </div>
         <div class="metric-inputs">
           <div class="metric-height-input-container">
             <label for="metric-height">Height</label>
@@ -41,17 +53,21 @@
         <div class="imperial-inputs hidden">
           <div class="imperial-height-container">
             <label for="imperial-height-ft">Height</label>
-            <input type="text" id="imperial-height-ft" placeholder="ft">
-            <input type="text" id="imperial-height-in" placeholder="in">
+            <div class="imperial-height-inputs">
+              <input type="text" id="imperial-height-ft" placeholder="ft">
+              <input type="text" id="imperial-height-in" placeholder="in">
+            </div>
           </div>
           <div class="imperial-weight-container">
-            <label for="imperial-weight-ft">Height</label>
-            <input type="text" id="imperial-weight-ft" placeholder="st">
-            <input type="text" id="imperial-weight-in" placeholder="lbs">
+            <label for="imperial-weight-ft">Weight</label>
+            <div class="imperial-weight-inputs">
+              <input type="text" id="imperial-weight-st" placeholder="st">
+              <input type="text" id="imperial-weight-lbs" placeholder="lbs">
+            </div>
           </div>
         </div>
         <div class="bmi-output-container">
-          <p>Your bmi is... <span id="bmi-value">23.4</span></p>
+          <p>Your bmi is... <span id="bmi-value"></span></p>
           <p>Your BMI suggests you’re a healthy weight. Your ideal weight is between 63.3kgs - 85.2kgs.</p>
         </div>
       </form>
@@ -59,11 +75,14 @@
     <section class="results">
       <img src="./assets/images/image-man-eating.webp" alt="A man smiling whilst eating Sushi with chopsticks"
         class="results-img">
-      <h2 class="section-heading">What your BMI result means</h2>
-      <p>A BMI range of 18.5 to 24.9 is considered a 'healthy weight.' Maintaining a healthy weight may lower your
-        chances of experiencing health issues later on, such as obesity and type 2 diabetes. Aim for a nutritious diet
-        with reduced fat and sugar content, incorporating ample fruits and vegetables. Additionally, strive for regular
-        physical activity, ideally about 30 minutes daily for five days a week.</p>
+      <div class="results-body">
+        <h2 class="section-heading">What your BMI result means</h2>
+        <p>A BMI range of 18.5 to 24.9 is considered a 'healthy weight.' Maintaining a healthy weight may lower your
+          chances of experiencing health issues later on, such as obesity and type 2 diabetes. Aim for a nutritious diet
+          with reduced fat and sugar content, incorporating ample fruits and vegetables. Additionally, strive for
+          regular
+          physical activity, ideally about 30 minutes daily for five days a week.</p>
+      </div>
     </section>
     <section class="tips">
       <div class="tip">
@@ -139,7 +158,7 @@
         </div>
       </div>
     </section>
-    <section></section>
+
   </main>
 </body>
 
