@@ -40,7 +40,7 @@
             <label for="imperial-radio" class="fw-700">Imperial</label>
           </div>
         </div>
-        <div class="metric-inputs">
+        <div class="metric-inputs ">
           <div class="metric-height-input-container">
             <label for="metric-height">Height</label>
             <input type="text" id="metric-height" placeholder="cm">
@@ -67,8 +67,12 @@
           </div>
         </div>
         <div class="bmi-output-container">
-          <p>Your bmi is... <span id="bmi-value"></span></p>
-          <p>Your BMI suggests you’re a healthy weight. Your ideal weight is between 63.3kgs - 85.2kgs.</p>
+          <div class="col col-left">
+            <p>Your bmi is... <span id="bmi-value">22.4</span></p>
+          </div>
+          <div class="col col-right">
+            <p>Your BMI suggests you’re a healthy weight. Your ideal weight is between 63.3kgs - 85.2kgs.</p>
+          </div>
         </div>
       </form>
     </section>
@@ -111,10 +115,13 @@
       </div>
     </section>
     <section class="limitations">
-      <h2 class="section-heading">Limitations of BMI</h2>
-      <p>Although BMI is often a practical indicator of healthy weight, it is not suited for every person. Specific
-        groups should carefully consider their BMI outcomes, and in certain cases, the measurement may not be beneficial
-        to use.</p>
+      <div class="limitation-intro">
+        <h2 class="section-heading">Limitations of BMI</h2>
+        <p>Although BMI is often a practical indicator of healthy weight, it is not suited for every person. Specific
+          groups should carefully consider their BMI outcomes, and in certain cases, the measurement may not be
+          beneficial
+          to use.</p>
+      </div>
       <div class="limitations-container">
         <div class="limitation">
           <header class="limitation-header">

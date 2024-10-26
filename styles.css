@@ -38,6 +38,9 @@
     --spacing-36: 3.6rem;
     --spacing-42: 4.2rem;
     --spacing-48: 4.8rem;
+    --spacing-52: 5.2rem;
+    --spacing-64: 6.4rem;
+    --spacing-72: 7.2rem;
 }
 
 html {
@@ -78,6 +81,10 @@ h4 {
 p {
     line-height: 1.4;
     color: var(--clr-electricBlue);
+}
+
+span {
+    display: block;
 }
 
 main {
@@ -228,7 +235,7 @@ input::placeholder {
     padding: var(--spacing-24);
 }
 
-.bmi-output-container>p {
+.bmi-output-container p {
     color: var(--clr-white);
 }
 
@@ -243,7 +250,6 @@ p>#bmi-value {
 /* RESULTS SECTION STYLES */
 section.results {
     padding: 0 0 var(--spacing-36) 0;
-
 }
 
 .results-img {
@@ -287,18 +293,18 @@ section.tips {
 section.limitations {
     padding: var(--spacing-48) var(--spacing-16);
     text-align: center;
+    margin: auto;
+
 }
+
 
 section.limitations h2 {
     margin-bottom: var(--spacing-24);
 }
 
-section.limitations>p {
-    margin-bottom: var(--spacing-48);
-}
-
 .limitations-container {
     text-align: left;
+
 }
 
 .limitation {
@@ -318,4 +324,172 @@ section.limitations>p {
     align-items: center;
     gap: 1.6rem;
     margin-bottom: var(--spacing-16);
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 620px) {
+    .background-gradient {
+        max-width: 76.8rem;
+        width: 100%;
+    }
+
+    main {
+        max-width: 76.8rem;
+        width: 100%;
+    }
+
+    section.hero {
+        padding-bottom: var(--spacing-64);
+    }
+
+    .hero-text {
+        max-width: 68.6rem;
+        margin: 0 auto var(--spacing-42) auto;
+    }
+
+    .bmi-form {
+        max-width: 68.6rem;
+        margin: 0 auto;
+        padding: var(--spacing-28);
+    }
+
+
+    .metric-inputs {
+        display: flex;
+        gap: 2.4rem;
+
+    }
+
+    .metric-height-input-container,
+    .metric-weight-input-container {
+        flex: 1 1 50%;
+    }
+
+    .bmi-output-container {
+        border-top-right-radius: 8.4rem;
+        border-bottom-right-radius: 8.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: var(--spacing-36);
+    }
+
+    .bmi-output-container p {
+        max-width: 27.4rem;
+    }
+
+    p>#bmi-value {
+        margin-bottom: 0;
+    }
+
+    section.results {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .results-img {
+        position: relative;
+        left: -45px;
+        clip-path: polygon(12% 0, 100% 0, 100% 100%, 12% 100%);
+    }
+
+    .results-body {
+        padding-right: var(--spacing-32);
+    }
+
+    /* TIPS */
+    section.tips {
+        padding: var(--spacing-52) var(--spacing-32);
+    }
+
+    .tip {
+        display: flex;
+        align-items: center;
+        gap: 3.2rem;
+    }
+
+    .tip img {
+        margin-bottom: 0;
+    }
+
+
+    /* END OF TIPS */
+    section.limitations {
+        max-width: 68.6rem;
+        padding: var(--spacing-72) var(--spacing-32);
+    }
+
+    .limitation-intro {
+        margin-bottom: var(--spacing-36);
+    }
+
+    .limitations-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2.4rem 1.6rem;
+
+    }
+
+    .limitation {
+        margin: 0;
+    }
+
+    .limitation p {
+        max-width: 27rem;
+    }
+
+    .limitation:nth-child(1),
+    .limitation:nth-child(3) {
+        grid-column: 1 / 3;
+    }
+
+    .limitation:nth-child(2),
+    .limitation:nth-child(4) {
+        grid-column: 3 / -1;
+    }
+
+    .limitation:nth-child(5) {
+        grid-column: 2 / 4;
+    }
+
+    .limitation:nth-child(5) p {
+        max-width: 30rem;
+    }
+
+}
+
+
+/* DESKTOP MEDIA QUERY */
+
+@media screen and (min-width: 960px) {
+    main {
+        max-width: 144rem;
+        width: 100%;
+    }
+
+    .background-gradient {
+        max-width: 96rem;
+    }
+
+    section.hero {
+        display: flex;
+        align-items: center;
+        padding: 0 9.6rem;
+    }
+
+    .bmi-form {
+        max-width: 56rem;
+    }
+
+    .hero-text-container {
+        text-align: left;
+    }
+
+    .hero-text {
+        max-width: 46.5rem;
+    }
+
 }
